@@ -10,17 +10,23 @@
 <body>
 
   <main>
-    <div class="container">
-      <div class="row">
-        @foreach ($movies as $movie) 
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <h3>{{ $movie->title }}</h3>
+    <div class="movies">
+      <div class="container">
+        <div class="row">
+          @foreach ($movies as $movie) 
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">{{ $movie->title }}</h3>
+                  <h6 class="card-subtitle mt-2">Original Title: {{ $movie->original_title }}</h4>
+                  <h6 class="card-subtitle mt-2">Nationality: {{ $movie->nationality }}</h4>
+                  <h6 class="card-subtitle mt-2">Release Date: {{ $movie->date }}</h4>
+                  <h6 class="card-subtitle mt-2">Vote: {{ $movie->vote }}</h4>
+                </div>
               </div>
             </div>
-          </div>
-        @endforeach
+          @endforeach
+        </div>
       </div>
     </div>
   </main>
